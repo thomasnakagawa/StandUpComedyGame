@@ -9,29 +9,40 @@
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_pun</sprite>
     <sprite>sprites\spr_satire</sprite>
+    <sprite>sprites\spr_path</sprite>
+    <sprite>sprites\spr_frown</sprite>
+    <sprite>sprites\spr_smile</sprite>
+    <sprite>sprites\spr_dart</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\GameInitialize.gml</script>
-    <script>scripts\drawCalendar.gml</script>
-    <script>scripts\drawConsole.gml</script>
-    <script>scripts\drawNotebook.gml</script>
-    <script>scripts\String_IntToDay.gml</script>
-    <script>scripts\Joke_to_string.gml</script>
     <script>scripts\JokeInitialize.gml</script>
     <script>scripts\PunInitialize.gml</script>
     <script>scripts\SatireInitialize.gml</script>
     <script>scripts\write_joke.gml</script>
     <script>scripts\console_log.gml</script>
-    <script>scripts\drawButton.gml</script>
     <script>scripts\setupPlanScreen.gml</script>
     <script>scripts\addRandomJoke.gml</script>
     <script>scripts\improveRandomJoke.gml</script>
     <script>scripts\dayStart.gml</script>
     <script>scripts\dayEnd.gml</script>
+    <scripts name="Conversions">
+      <script>scripts\String_IntToDay.gml</script>
+      <script>scripts\Joke_to_string.gml</script>
+    </scripts>
+    <scripts name="draw">
+      <script>scripts\drawButton.gml</script>
+      <script>scripts\drawConsole.gml</script>
+      <script>scripts\drawCalendar.gml</script>
+      <script>scripts\drawNotebook.gml</script>
+    </scripts>
+    <script>scripts\drawToolbar.gml</script>
+    <script>scripts\preperformInitialize.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_main</object>
@@ -39,9 +50,14 @@
     <object>objects\obj_button</object>
     <object>objects\obj_pun</object>
     <object>objects\obj_satire</object>
+    <object>objects\obj_viewer</object>
+    <object>objects\obj_performance</object>
+    <object>objects\obj_turret</object>
+    <object>objects\obj_dart</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

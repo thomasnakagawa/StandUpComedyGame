@@ -39,6 +39,6 @@ for(var i = 0; i < 7; i++){
     //draw "performance" sticky
     if(i == 6){
         draw_set_color(c_red);
-        draw_text(textX,boxHeight * 0.8,"performance#day!");
+        draw_text(textX,boxHeight * 0.8,"comedy show#day!");
     }
 }

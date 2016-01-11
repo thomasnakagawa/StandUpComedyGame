@@ -1,4 +1,5 @@
 ///GameInitialize
+randomize();
 messages = ds_list_create();
 myJokes = ds_list_create();
 dayOver = false;
@@ -12,5 +13,15 @@ enum Weekday {  Saturday,
                 Thursday,
                 Friday
 }
-today = Weekday.Saturday;
+today = Weekday.Friday;
+
+enum Stage {    Plan,
+                PrePerform,
+                Perform,
+                PostPerform
+}
+stage = Stage.Plan;
+
+reputation = 0;
+money      = 0;
 

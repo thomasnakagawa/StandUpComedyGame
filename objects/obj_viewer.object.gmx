@@ -4,9 +4,9 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_frown</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -25,17 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>GameInitialize();
-setupPlanScreen();
-dayStart();
-
-
+            <string>happiness = 0.0;
+hspeed = -1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="5" enumb="40">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,38 +49,7 @@ dayStart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(stage == Stage.Plan){
-    if(makeButton.release){
-        addRandomJoke(myJokes);
-        makeButton.release = false;
-        dayOver = true;
-        dayEnd();
-    }
-    
-    if(upgradeButton.release){
-        improveRandomJoke(myJokes);
-        upgradeButton.release = false;
-        dayOver = true;
-        dayEnd();
-    }
-    
-    if(nextButton.release){
-        if(today == 6){
-            stage = Stage.PrePerform;
-            with(obj_button){
-                instance_destroy();
-            }
-            room_goto(room1);
-        }else{
-            nextButton.release = false;
-            dayOver = false;
-            dayStart();
-        }
-    }
-}
-else if(stage == Stage.PrePerform){
-    
-}
+            <string>happiness += 0.01;
 </string>
           </argument>
         </arguments>
@@ -106,14 +72,11 @@ else if(stage == Stage.PrePerform){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(stage == Stage.Plan){
-    drawCalendar(today);
-    drawConsole(messages);
-    drawNotebook(myJokes);
-}
-else if(stage == Stage.PrePerform){
-    drawToolbar();
-}
+            <string>draw_sprite(spr_frown,0,x,y);
+var top = 32-round((happiness * 32));
+var height = 32 - top;
+var ypos = (y-16) + top + 1;
+draw_sprite_part(spr_smile,0,0,top,32,height,x-16,ypos);
 </string>
           </argument>
         </arguments>
