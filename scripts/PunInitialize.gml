@@ -1,0 +1,2 @@
+///PunInitialize()
+type = "pun";
