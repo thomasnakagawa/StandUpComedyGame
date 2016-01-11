@@ -1,0 +1,2 @@
+///SatireInitialize)
+type = "satire";

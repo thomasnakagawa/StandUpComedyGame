@@ -1,7 +1,7 @@
 ///drawConsole
 var x1 = 0;
 var x2 = room_width;
-var y1 = floor(room_height * 0.8);
+var y1 = floor(room_height * 0.9);
 var y2 = room_height;
 var input = argument0;
 
