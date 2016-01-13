@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>happiness = 0.0;
 hspeed = -1;
+size = 32;
 </string>
           </argument>
         </arguments>
@@ -73,10 +74,10 @@ hspeed = -1;
           <argument>
             <kind>1</kind>
             <string>draw_sprite(spr_frown,0,x,y);
-var top = 32-round((happiness * 32));
-var height = 32 - top;
-var ypos = (y-16) + top + 1;
-draw_sprite_part(spr_smile,0,0,top,32,height,x-16,ypos);
+var top = size-round((happiness * size));
+var height = size - top;
+var ypos = (y-(size/2)) + top + 1;
+draw_sprite_part(spr_smile,0,0,top,size,height,x-(size/2),ypos);
 </string>
           </argument>
         </arguments>
