@@ -28,8 +28,6 @@
             <string>GameInitialize();
 setupPlanScreen();
 dayStart();
-
-
 </string>
           </argument>
         </arguments>
@@ -54,14 +52,14 @@ dayStart();
             <kind>1</kind>
             <string>if(stage == Stage.Plan){
     if(makeButton.release){
-        addRandomJoke(myJokes);
+        addRandomJoke();
         makeButton.release = false;
         dayOver = true;
         dayEnd();
     }
     
     if(upgradeButton.release){
-        improveRandomJoke(myJokes);
+        improveRandomJoke();
         upgradeButton.release = false;
         dayOver = true;
         dayEnd();
@@ -74,6 +72,7 @@ dayStart();
                 instance_destroy();
             }
             room_goto(room1);
+            
         }else{
             nextButton.release = false;
             dayOver = false;
@@ -109,10 +108,11 @@ else if(stage == Stage.PrePerform){
             <string>if(stage == Stage.Plan){
     drawCalendar(today);
     drawConsole(messages);
-    drawNotebook(myJokes);
+    drawNotebook();
 }
 else if(stage == Stage.PrePerform){
     drawToolbar();
+    drawGrid(40,20,100,25,14);
 }
 </string>
           </argument>

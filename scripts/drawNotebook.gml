@@ -1,5 +1,4 @@
-///drawNotebook
-var input = argument0;
+///drawNotebook()
 //draw page
 var x1 = floor(room_width  * 0.05);
 var y1 = floor(room_height * 0.20);
@@ -17,8 +16,8 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_text((x1 + x2)/2,y1+10,"Jokes");
 draw_set_halign(fa_left);
-for(var i = 0; i < ds_list_size(input); i++){
+for(var i = 0; i < instance_number(obj_joke); i++){
     var xpos = x1 + 15;
     var ypos = y1 + 40 + (i * 40);
-    write_joke(xpos,ypos,ds_list_find_value(input,i));
+    write_joke(xpos,ypos,instance_find(obj_joke,i));
 }

@@ -52,14 +52,14 @@ range = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>motion_set(mydirection,7);
+            <string>motion_set(mydirection,14);
 if(point_distance(x,y,xstart,ystart) &gt; range){
     instance_destroy();
 }
 
 if(place_meeting(x,y,obj_viewer)){
     var inst = instance_place(x,y,obj_viewer);
-    inst.happiness += 0.1;
+    inst.happiness += (funniness + 1) * 0.05;
     instance_destroy();  
 }
 </string>

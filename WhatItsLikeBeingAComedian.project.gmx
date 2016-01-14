@@ -18,7 +18,9 @@
     <background>background\background0</background>
     <background>background\background1</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\GameInitialize.gml</script>
     <script>scripts\JokeInitialize.gml</script>
@@ -40,9 +42,13 @@
       <script>scripts\drawConsole.gml</script>
       <script>scripts\drawCalendar.gml</script>
       <script>scripts\drawNotebook.gml</script>
+      <script>scripts\drawGrid.gml</script>
     </scripts>
     <script>scripts\drawToolbar.gml</script>
     <script>scripts\preperformInitialize.gml</script>
+    <script>scripts\mouse_valid.gml</script>
+    <script>scripts\grid_snap.gml</script>
+    <script>scripts\updateAverage.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_main</object>
@@ -54,6 +60,10 @@
     <object>objects\obj_performance</object>
     <object>objects\obj_turret</object>
     <object>objects\obj_dart</object>
+    <object>objects\obj_dragndrop</object>
+    <object>objects\obj_path</object>
+    <object>objects\obj_turretPun</object>
+    <object>objects\obj_turretSatire</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
