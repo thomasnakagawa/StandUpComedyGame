@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_colour(40,room_height * 0.9,string(averagePercent) + "%",c_white,c_white,c_ltgray,c_ltgray,1);
+            <string>//draw_text_colour(40,room_height * 0.9,string(averagePercent) + "%",c_white,c_white,c_ltgray,c_ltgray,1);
 </string>
           </argument>
         </arguments>

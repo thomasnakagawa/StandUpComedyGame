@@ -113,6 +113,7 @@ else if(stage == Stage.PrePerform){
 else if(stage == Stage.PrePerform){
     drawToolbar();
     drawGrid(40,20,100,25,14);
+    drawConsole(messages);
 }
 </string>
           </argument>

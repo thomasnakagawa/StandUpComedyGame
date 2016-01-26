@@ -3,7 +3,9 @@ randomize();
 messages = ds_list_create();
 dayOver = false;
 
-ds_list_add(messages,"Welcome!");
+writeMessage("You have a stand up comedy show scheduled for friday. Use this week to write jokes for it!");
+writeMessage("The jokes are repereseted as little people. They will be like the towers of a tower defense game.");
+writeMessage("The different kind of jokes should have differnt abilities, but for now they are all the same");
 enum Weekday {  Saturday,
                 Sunday,
                 Monday,

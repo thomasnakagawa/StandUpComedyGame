@@ -23,3 +23,10 @@ with(obj_joke) {instance_destroy();}
 averagePercent = 0.0;
 N = 0;
 sum = 0;
+
+clearMessages();
+writeMessage("The performance part doesnt really work yet. Press S to spawn an audience member.");
+writeMessage("Drag and drop your jokes along the sides of the yellow path.");
+writeMessage("The jokes will throw things at audience members as they pass, which makes them happy.");
+writeMessage("Starting the show doesnt work. You have to manualy add audience members.");
+

@@ -49,6 +49,8 @@
     <script>scripts\mouse_valid.gml</script>
     <script>scripts\grid_snap.gml</script>
     <script>scripts\updateAverage.gml</script>
+    <script>scripts\writeMessage.gml</script>
+    <script>scripts\clearMessages.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_main</object>
