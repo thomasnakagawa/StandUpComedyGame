@@ -30,6 +30,8 @@ yoffset = 0;
 selected = false;
 movable = true;
 mydirection = 0;
+ghostx = 0;
+ghosty = 0;
 </string>
           </argument>
         </arguments>
@@ -69,6 +71,8 @@ mydirection = 0;
         y = mouse_y + yoffset;
     }
 }
+ghostx = grid_snap(x,40,0);
+ghosty = grid_snap(y,40,0);
 </string>
           </argument>
         </arguments>
@@ -116,7 +120,7 @@ yoffset = y - mouse_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(y &gt; 100) draw_sprite_ext(sprite_index,0,grid_snap(x,40,0),grid_snap(y,40,0),1,1,mydirection,c_white,0.5);
+            <string>if(y &gt; 100) draw_sprite_ext(sprite_index,0,ghostx,ghosty,1,1,mydirection,c_white,0.5);
 
 </string>
           </argument>

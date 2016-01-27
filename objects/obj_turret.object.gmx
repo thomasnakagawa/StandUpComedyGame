@@ -138,9 +138,9 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hover){
+            <string>if(hover &amp;&amp; y &gt; 100){
     draw_set_color(c_lime);
-    draw_circle(x,y,range,true);
+    draw_circle(ghostx,ghosty,range,true);
 }
 </string>
           </argument>

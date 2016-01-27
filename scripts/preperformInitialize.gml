@@ -14,7 +14,6 @@ for(var i = 0; i < instance_number(obj_joke); i++){
             inst = instance_create(60 + (i*80) ,80,obj_turretSatire);
         }
         inst.funniness = funny;
-        inst.range = 100 + (length * 30);
         show_debug_message(type);
     }
 }
