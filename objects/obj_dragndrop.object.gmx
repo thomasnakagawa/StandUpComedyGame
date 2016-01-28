@@ -30,8 +30,6 @@ yoffset = 0;
 selected = false;
 movable = true;
 mydirection = 0;
-ghostx = 0;
-ghosty = 0;
 </string>
           </argument>
         </arguments>
@@ -56,11 +54,7 @@ ghosty = 0;
             <kind>1</kind>
             <string>if(movable){
     if( !mouse_check_button(mb_left) || !mouse_valid()){
-        if(y &gt; 100){
-            x = grid_snap(x,40,0);
-            y = grid_snap(y,40,0);
-        }
-        else{
+        if(y &lt; 100){
             x = xstart;
             y = ystart;
         }
@@ -71,8 +65,6 @@ ghosty = 0;
         y = mouse_y + yoffset;
     }
 }
-ghostx = grid_snap(x,40,0);
-ghosty = grid_snap(y,40,0);
 </string>
           </argument>
         </arguments>
@@ -120,9 +112,7 @@ yoffset = y - mouse_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(y &gt; 100) draw_sprite_ext(sprite_index,0,ghostx,ghosty,1,1,mydirection,c_white,0.5);
-
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
