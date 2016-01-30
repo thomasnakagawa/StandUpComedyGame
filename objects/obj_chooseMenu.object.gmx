@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-2</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,18 +25,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sitCol = c_white;
-hoverCol = c_gray;
-pressCol = c_dkgray;
-hover = false;
-//press = false;
-release = false;
-active = true;
+            <string>punButton = instance_create(70,500,obj_button);
+punButton.x2 = punButton.x + 60;
+punButton.y2 = punButton.y + 60;
+punButton.title = "Pun";
 
-title = "Button";
-
-x2 = x+200;
-y2 = y+50;
+satireButton = instance_create(140,500,obj_button);
+satireButton.x2 = satireButton.x + 60;
+satireButton.y2 = satireButton.y + 60;
+satireButton.title = "Satire";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(punButton) instance_destroy();
+with(satireButton) instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -59,86 +80,14 @@ y2 = y+50;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(mouse_x &gt; x &amp;&amp;
-   mouse_x &lt; x2 &amp;&amp;
-   mouse_y &gt; y &amp;&amp;
-   mouse_y &lt; y2){
-   hover = true;
-}else{
-    hover = false;
+            <string>if(punButton.release){
+    jokeSelected(obj_pun);
+    instance_destroy();
 }
-   
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="56">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(mouse_x &gt; x &amp;&amp; mouse_x &lt; x2 &amp;&amp; mouse_y &gt; y &amp;&amp; mouse_y &lt; y2 &amp;&amp; active){
-    release = true;
+else if(satireButton.release){
+    jokeSelected(obj_satire);
+    instance_destroy();
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="11">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hover = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hover = true;
 </string>
           </argument>
         </arguments>
@@ -161,7 +110,14 @@ y2 = y+50;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>drawButton();
+            <string>var x1 = floor(room_width  * 0.05);
+var y1 = floor(room_height * 0.20);
+var x2 = floor(room_width  * 0.3);
+var y2 = floor(room_height * 0.76);
+
+draw_set_alpha(1);
+draw_set_color(c_gray);
+draw_rectangle(x1,y1,x2,y2,false);
 </string>
           </argument>
         </arguments>

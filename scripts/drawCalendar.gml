@@ -23,6 +23,18 @@ for(var i = 0; i < 7; i++){
     draw_set_color(c_black);
     draw_text(textX,textY,String_IntToDay(i));
     
+    //draw notes
+    /*
+    for(var j = 0; j < obj_main.tasksPerDay; j++){
+        var ind = ( i * obj_main.tasksPerDay ) + j; 
+        if(true || ds_list_size(notes) > ind){
+            var xpos = textX;
+            var ypos = textY + 30 * ( 1 + ((j % obj_main.tasksPerDay)));
+            draw_text(xpos,ypos,string(ds_list_find_value(notes,ind)));
+        }
+    }
+    */
+    
     //draw X's over past days
     if(i < currentday){
         draw_set_color(c_black);

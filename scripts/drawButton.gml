@@ -1,5 +1,9 @@
 ///drawButton
-draw_set_color(c_white);
+if(hover && active){
+    draw_set_color(c_maroon);
+}else{
+    draw_set_color(c_white);
+}
 if(active)
     draw_set_alpha(0.8);
 else{

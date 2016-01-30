@@ -2,8 +2,8 @@
 <object>
   <spriteName>spr_satire</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
-  <depth>0</depth>
+  <visible>-1</visible>
+  <depth>-1</depth>
   <persistent>-1</persistent>
   <parentName>obj_joke</parentName>
   <maskName>&lt;undefined&gt;</maskName>
