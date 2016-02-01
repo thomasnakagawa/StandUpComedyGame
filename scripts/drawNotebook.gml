@@ -22,3 +22,14 @@ for(var i = 0; i < instance_number(obj_joke); i++){
     var ypos = y1 + 40 + (i * 40);
     write_joke(xpos,ypos,instance_find(obj_joke,i));
 }*/
+
+//draw little lines
+draw_set_color(c_black);
+var xpos = 54;
+var xpos2 = 240;
+for(var i = 0; i < 10; i++){
+    var ypos = floor(room_height * 0.20) + 53 + (i  * 40);
+    draw_line(xpos,ypos,xpos2,ypos);
+}
+
+

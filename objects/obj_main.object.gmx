@@ -49,7 +49,9 @@ setupPlanScreen();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(stage == Stage.Plan){
+            <string>debug_control();
+
+if(stage == Stage.Plan){
 
     if(makeButton.release){
         makeButton.release = false;
@@ -103,13 +105,15 @@ else if(stage == Stage.PrePerform){
             <kind>1</kind>
             <string>if(stage == Stage.Plan){
     drawNotebook();
-    draw_text(500,300,"Actions left: " + string(tasksRemaining));
+    //draw_text(500,300,"Actions left: " + string(tasksRemaining));
+    drawPlanner();
 }
 else if(stage == Stage.Perform){
     drawToolbar();
+    drawConsole(messages);
 }
 
-drawConsole(messages);
+
 </string>
           </argument>
         </arguments>

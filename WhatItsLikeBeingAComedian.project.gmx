@@ -60,6 +60,8 @@
     <script>scripts\jokeSelected.gml</script>
     <script>scripts\jokeNotSelected.gml</script>
     <script>scripts\makeUpAudienceSize.gml</script>
+    <script>scripts\debug_control.gml</script>
+    <script>scripts\drawPlanner.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_main</object>

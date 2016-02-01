@@ -6,4 +6,4 @@ draw_set_valign(fa_middle);
 var name = Joke_to_string(self.id);
 draw_text(x+10,y,name);
 
-draw_sprite(sprite_index,0,x + 220,y);
+draw_sprite(sprite_index,0,x + 240,y);
