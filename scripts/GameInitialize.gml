@@ -16,6 +16,7 @@ stage = Stage.Plan;
 
 reputation = 0;
 money      = 0;
+audienceSz = 0;
 
 tasksPerDay = 2;
 tasksRemaining = 7 * tasksPerDay;

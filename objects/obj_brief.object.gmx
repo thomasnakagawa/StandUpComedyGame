@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>GameInitialize();
-setupPlanScreen();
+            <string>startButton = instance_create(400,400,obj_button);
+startButton.title = "Ready";
+startButton.x2 = 550;
+startButton.y2 = 440;
+
 </string>
           </argument>
         </arguments>
@@ -49,34 +52,10 @@ setupPlanScreen();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(stage == Stage.Plan){
-
-    if(makeButton.release){
-        makeButton.release = false;
-        addJoke();
-    }
-    
-    if(upgradeButton.release){
-        improveRandomJoke();
-        upgradeButton.release = false;
-        decrementTask();
-    }
-    if(cancelButton.release){
-        cancelButton.release = false;
-        jokeNotSelected();
-    }
-    
-    if(nextButton.release){
-        stage = Stage.PrePerform;
-        with(obj_button){
-            instance_destroy();
-        }
-        with(obj_joke){around = false;}
-        audienceSz = makeUpAudienceSize();
-        room_goto(rm_brief);
-    }
-}
-else if(stage == Stage.PrePerform){
+            <string>if(startButton.release){
+    startButton.release = false;
+    obj_main.stage = Stage.Perform;
+    room_goto(rm_show);
     
 }
 </string>
@@ -101,15 +80,16 @@ else if(stage == Stage.PrePerform){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(stage == Stage.Plan){
-    drawNotebook();
-    draw_text(500,300,"Actions left: " + string(tasksRemaining));
-}
-else if(stage == Stage.Perform){
-    drawToolbar();
-}
+            <string>draw_set_color(c_white);
+draw_set_alpha(0.85);
+draw_rectangle(200,50,room_width-200,300,false);
 
-drawConsole(messages);
+draw_set_color(c_black);
+draw_set_alpha(1);
+draw_rectangle(200,50,room_width-200,300,true);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text(210,70,"Time to perform your jokes.#" + string(obj_main.audienceSz) + " people showed up#Good luck")
 </string>
           </argument>
         </arguments>

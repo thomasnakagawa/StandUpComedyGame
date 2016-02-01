@@ -18,6 +18,7 @@
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -58,6 +59,7 @@
     <script>scripts\addJoke.gml</script>
     <script>scripts\jokeSelected.gml</script>
     <script>scripts\jokeNotSelected.gml</script>
+    <script>scripts\makeUpAudienceSize.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_main</object>
@@ -76,10 +78,12 @@
     <object>objects\obj_calendar</object>
     <object>objects\obj_upgrader</object>
     <object>objects\obj_chooseMenu</object>
+    <object>objects\obj_brief</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
-    <room>rooms\room1</room>
+    <room>rooms\rm_brief</room>
+    <room>rooms\rm_show</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

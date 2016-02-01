@@ -5,6 +5,7 @@ startButton.x2 = 300;
 startButton.y2 = 40;
 startButton.active = true;
 var count = 0;
+//instance_activate_object(obj_joke);
 for(var i = 0; i < instance_number(obj_joke); i++){
     with(instance_find(obj_joke,i)){
         var inst = noone;

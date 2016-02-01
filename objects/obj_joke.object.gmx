@@ -34,6 +34,7 @@ upper1 = noone;
 upper2 = noone;
 
 hover = false;
+around = true;
 </string>
           </argument>
         </arguments>
@@ -56,26 +57,30 @@ hover = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(upper1.release){
-    upper1.release = false;
-    funny++;
-    decrementTask();
-}
-if(upper2.release){
-    upper2.release = false;
-    special++;
-    decrementTask();
-}
-
-if((mouse_x &gt; x &amp;&amp;
-   mouse_x &lt; x + 254 &amp;&amp;
-   mouse_y &gt; y-20 &amp;&amp;
-   mouse_y &lt; y+19)
-   ||
-   upper1.hover || upper2.hover){
-   hover = true;   
+            <string>if(around){
+    if(upper1.release){
+        upper1.release = false;
+        funny++;
+        decrementTask();
+    }
+    if(upper2.release){
+        upper2.release = false;
+        special++;
+        decrementTask();
+    }
+    
+    if((mouse_x &gt; x &amp;&amp;
+       mouse_x &lt; x + 254 &amp;&amp;
+       mouse_y &gt; y-20 &amp;&amp;
+       mouse_y &lt; y+19)
+       ||
+       upper1.hover || upper2.hover){
+       hover = true;   
+    }else{
+        hover = false;
+    }
 }else{
-    hover = false;
+    visible = false;
 }
 </string>
           </argument>
@@ -99,12 +104,12 @@ if((mouse_x &gt; x &amp;&amp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>drawJoke();
-if(hover){
+            <string>if(hover){
     draw_set_color(c_teal);
     draw_set_alpha(0.4);
     draw_rectangle(x,y-20,x+253,y+19,false);
 }
+drawJoke();
 </string>
           </argument>
         </arguments>
