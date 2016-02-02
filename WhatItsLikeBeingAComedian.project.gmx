@@ -81,11 +81,14 @@
     <object>objects\obj_upgrader</object>
     <object>objects\obj_chooseMenu</object>
     <object>objects\obj_brief</object>
+    <object>objects\obj_debrief</object>
+    <object>objects\obj_crowd</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_plan</room>
     <room>rooms\rm_brief</room>
     <room>rooms\rm_show</room>
+    <room>rooms\rm_debrief</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

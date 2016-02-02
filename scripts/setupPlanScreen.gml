@@ -1,4 +1,16 @@
 ///setupPlanScreen()
+reputation = 0;
+money      = 0;
+
+audienceSz = 0;
+N = 0;
+sum = 0;
+
+tasksPerDay = 2;
+tasksRemaining = 7 * tasksPerDay;
+
+averagePercent = 0.0;
+
 instance_create(0,0,obj_calendar);
 
 makeButton =    instance_create(floor(room_width * 0.05), floor(room_height * 0.8), obj_button);

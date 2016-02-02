@@ -61,6 +61,7 @@ if(fireCooldown &lt; 1){ //ready to fire
         if(point_distance(x,y,inst.x,inst.y) &lt; range){
             mydirection = point_direction(x,y,inst.x,inst.y);
             var newdart = instance_create(x,y,obj_dart);
+            newdart.target = inst;
             newdart.mydirection = mydirection;
             newdart.funniness = funniness;
             newdart.range = range;

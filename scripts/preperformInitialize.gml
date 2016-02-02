@@ -4,6 +4,8 @@ startButton.title = "Start the show";
 startButton.x2 = 300;
 startButton.y2 = 40;
 startButton.active = true;
+
+crowdInst = noone;
 var count = 0;
 //instance_activate_object(obj_joke);
 for(var i = 0; i < instance_number(obj_joke); i++){
@@ -20,9 +22,7 @@ for(var i = 0; i < instance_number(obj_joke); i++){
 }
 with(obj_joke) {instance_destroy();}
 
-averagePercent = 0.0;
-N = 0;
-sum = 0;
+
 
 clearMessages();
 writeMessage("The performance part doesnt really work yet. Press S to spawn an audience member.");

@@ -3,7 +3,7 @@
   <spriteName>spr_dart</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-9</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,7 @@
             <string>mydirection = 0;
 funniness = 0;
 range = 0;
+target = noone;
 
 
 </string>
@@ -52,7 +53,11 @@ range = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>motion_set(mydirection,14);
+            <string>if(instance_exists(target)){
+    motion_set(point_direction(x,y,target.x,target.y),14);
+}else{
+    instance_destroy();
+}
 if(point_distance(x,y,xstart,ystart) &gt; range){
     instance_destroy();
 }
