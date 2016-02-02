@@ -1,8 +1,10 @@
 ///draw_planner
 var x1 = 0;
 var x2 = room_width;
-var y1 = floor(room_height * 0.9);
-var y2 = room_height;
+var y1 = 0;//floor(room_width/7);
+var y2 = floor(room_height * 0.15);
+
+
 
 draw_set_color(c_white);
 draw_rectangle(x1,y1,x2,y2,false);

@@ -18,6 +18,8 @@ makeButton.title = "Write new joke";
 makeButton.x2 = floor(room_width  * 0.3);
 makeButton.y2 = floor(room_height * 0.85);
 makeButton.active = true;
+makeButton.infoTitle = "New Joke";
+makeButton.infoMessage = "Use an action point to write a new joke";
 
 cancelButton =    instance_create(floor(room_width * 0.05), floor(room_height * 0.2), obj_button);
 cancelButton.title = "Cancel";

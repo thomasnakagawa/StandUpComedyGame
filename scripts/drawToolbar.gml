@@ -3,6 +3,9 @@ var x1 = 20;
 var y1 = 60;
 var x2 = room_width;
 var y2 = 100;
+
+
+
 var boxWidth = 80;
 
 //draw top bar

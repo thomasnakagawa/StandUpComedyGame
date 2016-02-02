@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-2</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_infoable</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -37,6 +37,7 @@ title = "Button";
 
 x2 = x+200;
 y2 = y+50;
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -67,6 +68,8 @@ y2 = y+50;
 }else{
     hover = false;
 }
+
+event_inherited();
    
 </string>
           </argument>

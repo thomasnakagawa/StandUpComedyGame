@@ -4,8 +4,8 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
-  <parentName>obj_infoable</parentName>
+  <persistent>0</persistent>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,16 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>funny  = 0;
-special = 0;
-type = "joke";
-adjective = "comic";
-
-upper1 = noone;
-upper2 = noone;
-
-hover = false;
-around = true;
+            <string>title = "";
+message = "";
+show = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show = false;
 </string>
           </argument>
         </arguments>
@@ -57,40 +73,7 @@ around = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(around){
-    if(upper1.release){
-        upper1.release = false;
-        funny++;
-        decrementTask();
-    }
-    if(upper2.release){
-        upper2.release = false;
-        special++;
-        decrementTask();
-    }
-    
-    if((mouse_x &gt; x &amp;&amp;
-       mouse_x &lt; x + 254 + 100 &amp;&amp;
-       mouse_y &gt; y-20 &amp;&amp;
-       mouse_y &lt; y+19)
-       ||
-       upper1.hover || upper2.hover){
-       hover = true;   
-    }else{
-        hover = false;
-    }
-}else{
-    visible = false;
-}
-
-if(hover){
-    instance_activate_object(upper1);
-    instance_activate_object(upper2);
-}else{
-    instance_deactivate_object(upper1);
-    instance_deactivate_object(upper2);
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -112,12 +95,7 @@ if(hover){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hover){
-    draw_set_color(c_teal);
-    draw_set_alpha(0.4);
-    draw_rectangle(x,y-20,x+253,y+19,false);
-}
-drawJoke();
+            <string>if(show)drawInfo();
 </string>
           </argument>
         </arguments>
