@@ -30,6 +30,10 @@ yoffset = 0;
 selected = false;
 movable = true;
 mydirection = 0;
+
+funny = 0;
+special = 0;
+type = "tower";
 </string>
           </argument>
         </arguments>

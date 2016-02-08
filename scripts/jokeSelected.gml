@@ -9,7 +9,8 @@ with(obj_main){
     var jokeno = numJokes;
     var xpos = floor(room_width  * 0.05);
     var ypos = floor(room_height * 0.20) + 45 + (jokeno  * 40);
-    instance_create(xpos,ypos,newinst);
+    var inst = instance_create(xpos,ypos,newinst);
+
     numJokes++;
     if(numJokes >= 10){
         with(obj_main){

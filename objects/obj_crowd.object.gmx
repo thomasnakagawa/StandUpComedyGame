@@ -52,6 +52,15 @@ done = false;
           <argument>
             <kind>1</kind>
             <string>obj_main.stage = Stage.PostPerform;
+//create joke traces
+with(obj_turret){
+    if(y &lt; 100){
+        var inst = instance_create(0,0,obj_joke_trace);
+        inst.type = type;
+        inst.funny = funny;
+        inst.special = special;
+    }
+}
 room_goto(rm_debrief);
 </string>
           </argument>
@@ -85,7 +94,7 @@ room_goto(rm_debrief);
 }else{
     if(!instance_exists(obj_viewer) &amp;&amp; !done){
         done = true;
-        alarm[0] = 90;
+        alarm[0] = 50;
     }
 }
 </string>

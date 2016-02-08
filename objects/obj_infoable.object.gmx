@@ -49,7 +49,7 @@ infoMessage = "";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hover){
+            <string>if(hover &amp;&amp; instance_exists(obj_infoBox)){
     obj_infoBox.title = infoTitle;
     obj_infoBox.message = infoMessage;
     obj_infoBox.show = true;

@@ -70,7 +70,7 @@ around = true;
     }
     
     if((mouse_x &gt; x &amp;&amp;
-       mouse_x &lt; x + 254 + 100 &amp;&amp;
+       mouse_x &lt; x + 254 + 140 &amp;&amp;
        mouse_y &gt; y-20 &amp;&amp;
        mouse_y &lt; y+19)
        ||

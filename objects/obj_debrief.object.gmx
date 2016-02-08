@@ -30,6 +30,8 @@ continueButton.title = "Ok";
 continueButton.x2 = 550;
 continueButton.y2 = 440;
 
+updateReputation();
+
 </string>
           </argument>
         </arguments>

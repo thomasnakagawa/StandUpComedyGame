@@ -28,7 +28,6 @@
             <string>range = 100;
 baseFireRate = 45;
 fireCooldown = 0;
-funniness = 0;
 event_inherited();
 hover = false;
 </string>
@@ -63,7 +62,7 @@ if(fireCooldown &lt; 1){ //ready to fire
             var newdart = instance_create(x,y,obj_dart);
             newdart.target = inst;
             newdart.mydirection = mydirection;
-            newdart.funniness = funniness;
+            newdart.funniness = funny;
             newdart.range = range;
             fireCooldown = baseFireRate;
         }

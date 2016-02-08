@@ -28,6 +28,9 @@
             <string>event_inherited();
 x2 = x+50;
 y2 = y+32;
+
+//infoTitle = "";
+//infoMessage = "";
 </string>
           </argument>
         </arguments>

@@ -1,4 +1,11 @@
 ///GameInitialize
+base_audience_size = 15;
+audience_size_gain = 1.5;
+
+
+
+
+
 randomize();
 messages = ds_list_create();
 
@@ -14,7 +21,7 @@ enum Stage {    Plan,
 }
 stage = Stage.Plan;
 
-reputation = 0;
+reputation = 100;
 money      = 0;
 
 audienceSz = 0;
@@ -22,6 +29,5 @@ N = 0;
 sum = 0;
 
 tasksPerDay = 2;
-tasksRemaining = 7 * tasksPerDay;
 
 averagePercent = 0.0;

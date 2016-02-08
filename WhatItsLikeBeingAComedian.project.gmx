@@ -63,6 +63,8 @@
     <script>scripts\debug_control.gml</script>
     <script>scripts\drawPlanner.gml</script>
     <script>scripts\drawInfo.gml</script>
+    <script>scripts\string_to_joke_index.gml</script>
+    <script>scripts\updateReputation.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_main</object>
@@ -86,6 +88,7 @@
     <object>objects\obj_crowd</object>
     <object>objects\obj_infoBox</object>
     <object>objects\obj_infoable</object>
+    <object>objects\obj_joke_trace</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_plan</room>
