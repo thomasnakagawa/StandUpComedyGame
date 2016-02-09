@@ -75,6 +75,7 @@ if(stage == Stage.Plan){
         }
         with(obj_joke){around = false;}
         audienceSz = makeUpAudienceSize();
+        money += audienceSz * ticket_price;
         room_goto(rm_brief);
     }
 }

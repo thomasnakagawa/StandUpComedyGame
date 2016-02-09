@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>happiness = 0.0;
-
+slow = false;
+slowCounter = 0;
 size = 32;
 </string>
           </argument>
@@ -83,6 +84,39 @@ size = 32;
           <argument>
             <kind>1</kind>
             <string>if(happiness &gt; 1) happiness = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(slow){
+    path_speed = 1.5;
+    slowCounter--;
+    if(slowCounter &lt; 0){
+        slowCounter = 0;
+        slow = false;
+    }
+}
+else{
+    path_speed = 3;
+}
 </string>
           </argument>
         </arguments>
@@ -157,6 +191,10 @@ var top = size-round((happiness * size));
 var height = size - top;
 var ypos = (y-(size/2)) + top + 1;
 draw_sprite_part(spr_smile,0,0,top,size,height,x-(size/2),ypos);
+
+if(slow){
+    draw_sprite(spr_think,0,x,y-24);
+}
 </string>
           </argument>
         </arguments>

@@ -90,6 +90,12 @@ if(hover){
     instance_deactivate_object(upper1);
     instance_deactivate_object(upper2);
 }
+
+if(hover &amp;&amp; !upper1.hover &amp;&amp; !upper2.hover &amp;&amp; instance_exists(obj_infoBox)){
+    obj_infoBox.title = infoTitle;
+    obj_infoBox.message = infoMessage;
+    obj_infoBox.show = true;
+}
 </string>
           </argument>
         </arguments>

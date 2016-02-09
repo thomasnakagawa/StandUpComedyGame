@@ -1,10 +1,10 @@
 ///GameInitialize
 base_audience_size = 15;
 audience_size_gain = 1.5;
+ticket_price = 10;
 
 
-
-
+weekNo = 1;
 
 randomize();
 messages = ds_list_create();

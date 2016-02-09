@@ -89,7 +89,11 @@ draw_set_alpha(1);
 draw_rectangle(200,50,room_width-200,300,true);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_text(210,70,"Time to perform your jokes.#" + string(obj_main.audienceSz) + " people showed up#Good luck")
+draw_text(210,70,"Time to perform your jokes.#" 
+                + string(obj_main.audienceSz) + " people showed up#
+                Ticket sales were $" + string(obj_main.audienceSz * obj_main.ticket_price) + "#
+                You now have $" + string(obj_main.money) + "#
+                Good luck")
 </string>
           </argument>
         </arguments>

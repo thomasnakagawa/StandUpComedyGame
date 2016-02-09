@@ -94,7 +94,7 @@ room_goto(rm_debrief);
 }else{
     if(!instance_exists(obj_viewer) &amp;&amp; !done){
         done = true;
-        alarm[0] = 50;
+        alarm[0] = irandom_range(20,50);//50;
     }
 }
 </string>

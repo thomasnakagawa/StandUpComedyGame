@@ -14,6 +14,7 @@
     <sprite>sprites\spr_smile</sprite>
     <sprite>sprites\spr_dart</sprite>
     <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\spr_think</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -44,6 +45,7 @@
       <script>scripts\drawNotebook.gml</script>
       <script>scripts\drawGrid.gml</script>
       <script>scripts\drawJoke.gml</script>
+      <script>scripts\drawPlanner.gml</script>
     </scripts>
     <script>scripts\drawToolbar.gml</script>
     <script>scripts\preperformInitialize.gml</script>
@@ -61,7 +63,6 @@
     <script>scripts\jokeNotSelected.gml</script>
     <script>scripts\makeUpAudienceSize.gml</script>
     <script>scripts\debug_control.gml</script>
-    <script>scripts\drawPlanner.gml</script>
     <script>scripts\drawInfo.gml</script>
     <script>scripts\string_to_joke_index.gml</script>
     <script>scripts\updateReputation.gml</script>

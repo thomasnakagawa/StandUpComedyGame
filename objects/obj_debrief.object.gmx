@@ -57,7 +57,12 @@ updateReputation();
             <string>if(continueButton.release){
     continueButton.release = false;
     obj_main.stage = Stage.Plan;
-    room_goto(rm_plan);  
+    obj_main.weekNo++;
+    if(obj_main.weekNo % 4 == 1){
+        obj_main.money -= 500;
+    }
+    room_goto(rm_plan);
+    
 }
 </string>
           </argument>

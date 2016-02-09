@@ -29,6 +29,8 @@
 funniness = 0;
 range = 0;
 target = noone;
+effect = "none";
+effectTime = 60;
 
 
 </string>
@@ -64,7 +66,11 @@ if(point_distance(x,y,xstart,ystart) &gt; range){
 
 if(place_meeting(x,y,obj_viewer)){
     var inst = instance_place(x,y,obj_viewer);
-    inst.happiness += (funniness + 1) * 0.05;
+    inst.happiness += funniness;
+    if(effect == "slow"){
+        inst.slow = true;
+        inst.slowCounter = effectTime;
+    }
     instance_destroy();  
 }
 </string>
