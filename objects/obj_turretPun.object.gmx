@@ -51,7 +51,11 @@ baseFireRate = 30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>range += special * 10;
+            <string>event_inherited();
+range += special * 10;
+
+infoTitle = type;
+infoMessage = "This pun has:#X" + string(funny) + " funny#X" + string(special) + " punny";
 </string>
           </argument>
         </arguments>
@@ -78,9 +82,22 @@ baseFireRate = 30;
 
 if(fireCooldown &lt; 1){ //ready to fire
     if(instance_number(obj_viewer) &gt; 0){
-    
-        var inst = instance_nearest(x,y,obj_viewer);
-        if(point_distance(x,y,inst.x,inst.y) &lt; range){
+        //var inRange = ds_list_create();
+        var inst = noone;
+        for(var i = 0; i &lt; instance_number(obj_viewer); i++){
+            var objIndex = instance_find(obj_viewer,i);
+            if(point_distance(x,y,objIndex.x,objIndex.y) &lt; range){
+                //ds_list_add(inRange,objIndex);
+                if(inst == noone) inst = objIndex;
+                else if(objIndex.happiness &gt; inst){
+                    inst = objIndex;
+                }
+            }
+        }
+        
+        if(inst != noone){
+            
+            //fire a dart at inst
             mydirection = point_direction(x,y,inst.x,inst.y);
             var newdart = instance_create(x,y,obj_dart);
             newdart.target = inst;

@@ -29,6 +29,8 @@
 slow = false;
 slowCounter = 0;
 size = 32;
+lifetime = 0;
+full = false;
 </string>
           </argument>
         </arguments>
@@ -84,6 +86,8 @@ size = 32;
           <argument>
             <kind>1</kind>
             <string>if(happiness &gt; 1) happiness = 1;
+
+if(happiness &gt;= 1) full = true;
 </string>
           </argument>
         </arguments>
@@ -106,7 +110,14 @@ size = 32;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(slow){
+            <string>if(full){
+    var inst = instance_create(x,y,obj_viewer_fall);
+    inst.sprite_index = spr_smile;
+    updateAverage(happiness);
+    instance_destroy();
+}
+
+if(slow){
     path_speed = 1.5;
     slowCounter--;
     if(slowCounter &lt; 0){
@@ -117,6 +128,16 @@ size = 32;
 else{
     path_speed = 3;
 }
+/*
+if(position_meeting(x,y,obj_viewer)){
+    var inst = instance_position(x,y,obj_viewer);
+    if(lifetime &lt; inst.lifetime){
+        path_speed = path_speed * ( point_distance(x,y,inst.x,inst.y) / 32);   
+    }
+}
+*/
+
+lifetime++;
 </string>
           </argument>
         </arguments>

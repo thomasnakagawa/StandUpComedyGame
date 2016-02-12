@@ -32,7 +32,36 @@ target = noone;
 effect = "none";
 effectTime = 60;
 
-
+alarm[0] = 2;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var inst = target;
+inst.happiness += funniness;
+if(effect == "slow"){
+    inst.slow = true;
+    inst.slowCounter = effectTime;
+}
+instance_destroy();  
 </string>
           </argument>
         </arguments>
@@ -56,16 +85,17 @@ effectTime = 60;
           <argument>
             <kind>1</kind>
             <string>if(instance_exists(target)){
-    motion_set(point_direction(x,y,target.x,target.y),14);
+    //motion_set(point_direction(x,y,target.x,target.y),14);
 }else{
     instance_destroy();
 }
+/*
 if(point_distance(x,y,xstart,ystart) &gt; range){
     instance_destroy();
 }
 
-if(place_meeting(x,y,obj_viewer)){
-    var inst = instance_place(x,y,obj_viewer);
+if(place_meeting(x,y,target)){
+    var inst = target;
     inst.happiness += funniness;
     if(effect == "slow"){
         inst.slow = true;
@@ -73,6 +103,7 @@ if(place_meeting(x,y,obj_viewer)){
     }
     instance_destroy();  
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -95,7 +126,9 @@ if(place_meeting(x,y,obj_viewer)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,0,x,y,1,1,mydirection + 180,c_white,1);
+            <string>//draw_sprite_ext(sprite_index,0,x,y,1,1,mydirection + 180,c_white,1);
+draw_set_color(c_white);
+draw_line(x,y,target.x,target.y);
 </string>
           </argument>
         </arguments>

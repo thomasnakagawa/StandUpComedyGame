@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_infoable2</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -34,6 +34,8 @@ mydirection = 0;
 funny = 0;
 special = 0;
 type = "tower";
+
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -69,6 +71,13 @@ type = "tower";
         y = mouse_y + yoffset;
     }
 }
+
+if(position_meeting(mouse_x,mouse_y,self)){
+    hover = true;
+}else{
+    hover = false;
+}
+event_inherited();
 </string>
           </argument>
         </arguments>
